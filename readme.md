@@ -11,7 +11,7 @@ console.log("ID:", id);
 }
 
 printId(123); // OK: number
-printId("abc123"); // OK: string`
+printId("abc123");`
 
     ** 2. Intersection Type (&)**
 

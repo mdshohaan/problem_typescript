@@ -1,46 +1,54 @@
-### Example of using union and intersection types in TypeScript.
+# 🧑‍💻 Example: Using Union and Intersection Types in TypeScript
 
-    ** 1. Union Type (|) **
+This document demonstrates how to use **union** (`|`) and **intersection** (`&`) types in TypeScript.
 
-> A value that can be one of multiple types.
+---
 
-_✅ Example: Union Type_
+## 1. 🔷 Union Type (`|`)
 
-<pre>
-\```typescript
+> A value that can be **one of multiple types**.
+
+✅ **Example: Union Type**
+
+```typescript
 function printId(id: number | string) {
-console.log("ID:", id);
+  console.log("ID:", id);
 }
 
 printId(123); // OK: number
 printId("abc123"); // OK: string
-\```
-</pre>
+```
 
-    ** 2. Intersection Type (&)**
+---
 
-> A value that must satisfy multiple types at the same time.
-> _✅ Example: Intersection Type_
+## 2. 🔶 Intersection Type (`&`)
 
-<pre>
-\```typescript
+> A value that must satisfy **multiple types at the same time**.
+
+✅ **Example: Intersection Type**
+
+```typescript
 type Person = {
-name: string;
+  name: string;
 };
 
 type Employee = {
-employeeId: number;
+  employeeId: number;
 };
 
 type Staff = Person & Employee;
 
 const john: Staff = {
-name: "John",
-employeeId: 101,
+  name: "John",
+  employeeId: 101,
 };
-\```
-</pre>
-
 ```
 
-```
+---
+
+## ✅ Summary
+
+- **Union Type** allows flexibility by accepting values of multiple types.
+- **Intersection Type** ensures that a value must satisfy all combined type conditions.
+
+Use these features to write **type-safe and expressive code** in TypeScript!

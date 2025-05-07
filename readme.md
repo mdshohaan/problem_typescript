@@ -52,3 +52,40 @@ const john: Staff = {
 - **Intersection Type** ensures that a value must satisfy all combined type conditions.
 
 Use these features to write **type-safe and expressive code** in TypeScript!
+
+---
+
+# 🗝️ keyof Keyword in TypeScript
+
+> The `keyof` keyword is used to get a **union of property names** (as string literals) of a given type.
+
+It is helpful when you want to work with dynamic property names in a type-safe way.
+
+✅ **Example: keyof usage**
+
+```typescript
+type Product = {
+  name: string;
+  price: number;
+};
+
+type ProductKeys = keyof Product;
+// Equivalent to: "name" | "price"
+
+function getValue(obj: Product, key: keyof Product): string | number {
+  return obj[key];
+}
+
+const pen: Product = { name: "Pen", price: 10 };
+
+console.log(getValue(pen, "name")); // Output: "Pen"
+console.log(getValue(pen, "price")); // Output: 10
+```
+
+---
+
+## ✅ Summary (Updated)
+
+- **Union Type** allows flexibility by accepting values of multiple types.
+- **Intersection Type** ensures that a value must satisfy all combined type conditions.
+- **keyof Keyword** helps extract the keys of a type for safe dynamic access.

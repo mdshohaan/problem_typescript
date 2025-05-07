@@ -6,19 +6,19 @@
 
 _✅ Example: Union Type_
 
-`function printId(id: number | string) {
+````function printId(id: number | string) {
 console.log("ID:", id);
 }
 
 printId(123); // OK: number
-printId("abc123");`
+printId("abc123"); // OK: string```
 
     ** 2. Intersection Type (&)**
 
 > A value that must satisfy multiple types at the same time.
 > _✅ Example: Intersection Type_
 
-`type Person = {
+```type Person = {
 name: string;
 };
 
@@ -31,4 +31,5 @@ type Staff = Person & Employee;
 const john: Staff = {
 name: "John",
 employeeId: 101,
-};`
+};```
+````

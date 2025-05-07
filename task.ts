@@ -1,25 +1,16 @@
 function formatString(input: string, toUpper: boolean = true): string {
   return toUpper ? input.toUpperCase() : input.toLowerCase();
 }
-// console.log(formatString("Hello", false));
-
-const books = [
-  { title: "Book A", rating: 4.5 },
-  { title: "Book B", rating: 3.2 },
-  { title: "Book C", rating: 5.0 },
-];
 
 function filterByRating(
   items: { title: string; rating: number }[]
 ): { title: string; rating: number }[] {
   return items.filter((item) => item.rating >= 4);
 }
-// console.log(filterByRating(books));
 
 function concatenateArrays<T>(...arrays: T[][]): T[] {
   return arrays.reduce((acc, curr) => acc.concat(curr), []);
 }
-// console.log(concatenateArrays(["a", "b"], ["c"]));
 
 class Vehicle {
   private make: string;
@@ -42,8 +33,6 @@ class Car extends Vehicle {
     return `Model:${this.model}`;
   }
 }
-const myCar = new Car("Toyota", 2020, "Corolla");
-// console.log(myCar.getModel());
 
 function processValue(value: string | number): number {
   if (typeof value === "string") {
@@ -52,13 +41,6 @@ function processValue(value: string | number): number {
     return value * 2;
   }
 }
-// console.log(processValue(10));
-
-const products = [
-  { name: "Pen", price: 10 },
-  { name: "Notebook", price: 25 },
-  { name: "Bag", price: 50 },
-];
 
 interface Product {
   name: string;
@@ -72,7 +54,6 @@ function getMostExpensiveProduct(products: Product[]): Product | null {
     current.price > max.price ? current : max
   );
 }
-// console.log(getMostExpensiveProduct(products));
 
 enum Day {
   Monday,
@@ -90,7 +71,6 @@ function getDayType(day: Day): string {
   }
   return "Weekday";
 }
-// console.log(getDayType(Day.Monday));
 
 async function squareAsync(n: number): Promise<number> {
   if (n < 0) {
@@ -102,4 +82,3 @@ async function squareAsync(n: number): Promise<number> {
     }, 1000);
   });
 }
-// console.log(squareAsync(-4).then(console.log));
